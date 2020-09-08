@@ -1,6 +1,6 @@
 FROM ruby:2.7.1-alpine3.12
 
-RUN apk add git alpine-sdk wget; \
+RUN apk add aws-cli jq git alpine-sdk wget; \
     git clone https://github.com/aws/aws-codedeploy-agent.git /opt/codedeploy-agent; \
     gem install bundler -v 1.3.5; \
     cd /opt/codedeploy-agent; \
